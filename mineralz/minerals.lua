@@ -15,7 +15,7 @@ minetest.register_node("mineralz:emerald_block", {
 
 minetest.register_node("mineralz:stone_with_emerald", {
 	description = "Emerald Ore",
-	tiles = {"mineralz_emerald_ore.png"},
+	tiles = {"default_stone.png^mineralz_emerald_ore.png"},
 	is_ground_content = true,
 	groups = {cracky=2,level=3},
 	sounds = default.node_sound_stone_defaults,
@@ -43,7 +43,7 @@ minetest.register_node("mineralz:lapis_lazuli_block", {
 
 minetest.register_node("mineralz:stone_with_lapis_lazuli", {
 	description = "Lapis Lazuli Ore",
-	tiles = {"mineralz_lapis_lazuli_ore.png"},
+	tiles = {"default_stone.png^mineralz_lapis_lazuli_ore.png"},
 	is_ground_content = true,
 	groups = {cracky=2,level=3},
 	sounds = default.node_sound_stone_defaults,
@@ -71,7 +71,7 @@ minetest.register_node("mineralz:malachite_block", {
 
 minetest.register_node("mineralz:stone_with_malachite", {
 	description = "Malachite Ore",
-	tiles = {"mineralz_malachite_ore.png"},
+	tiles = {"default_stone.png^mineralz_malachite_ore.png"},
 	is_ground_content = true,
 	groups = {cracky=1,level=1},
 	sounds = default.node_sound_stone_defaults,
