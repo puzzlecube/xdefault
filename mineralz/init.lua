@@ -9,3 +9,6 @@ mineralz.pillar_template = {
 }
 
 dofile(mp.."/crystals.lua")
+dofile(mp.."/crafts.lua")
+dofile(mp.."/minerals.lua")
+dofile(mp.."/mapgen.lua")

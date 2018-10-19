@@ -45,7 +45,7 @@ local four_craftings = {
 	"malachite",
 }
 
-for _,mineral in pairs(crystal_craftings) do
+for _,mineral in pairs(four_craftings) do
 	local mineral_fullname = "mineralz:"..mineral
 	local block = mineral_fullname.."_block"
 	minetest.register_craft({

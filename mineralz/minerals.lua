@@ -1,6 +1,6 @@
 -- Hey it is redundantly named!
 
-minetest.register_craftitem({"mineralz:emerald", {
+minetest.register_craftitem("mineralz:emerald", {
 	description = "Emerald",
 	inventory_image = "mineralz_emerald.png",
 })
@@ -28,7 +28,7 @@ minetest.register_node("mineralz:stone_with_emerald", {
 	},
 })
 
-minetest.register_craftitem({"mineralz:lapis_lazuli", {
+minetest.register_craftitem("mineralz:lapis_lazuli", {
 	description = "Lapis Lazuli",
 	inventory_image = "mineralz_lapis_lazuli.png",
 })
@@ -56,7 +56,7 @@ minetest.register_node("mineralz:stone_with_lapis_lazuli", {
 	},
 })
 
-minetest.register_craftitem({"mineralz:malachite", {
+minetest.register_craftitem("mineralz:malachite", {
 	description = "Malachite",
 	inventory_image = "mineralz_malachite.png",
 })

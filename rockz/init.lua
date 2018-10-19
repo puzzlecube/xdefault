@@ -7,7 +7,7 @@
 
 -- Enable xrockz to rockz more stuff
 local enable_xrockz = true
-rocks = {}
+rockz = {}
 rockz.xrockz = enable_xrockz
 
 local function deps_met(mod)
