@@ -7,8 +7,6 @@
 
 -- Enable xrockz to rockz more stuff
 local enable_xrockz = true
-local legacy_compat = minetest.get_modpath("xdefault")
-rockz={}
 rockz.xrockz = enable_xrockz
 
 local function deps_met(mod)
@@ -23,12 +21,6 @@ local function deps_met(mod)
 		end
 	end
 end
---[[if legacy_compat ~= true then
-	xdefault={}
-	function xdefault.back_compat_alias(node)
-		print("xdefault nod found, not registering alias for "..node)
-	end
-end]]
 
 mpath = minetest.get_modpath("rockz")
 
@@ -62,7 +54,6 @@ for _,stonetype in pairs(stonez) do
     drop = 'rockz:'..stonename.."_cobble",
     sounds = default.node_sound_stone_defaults(),
   })
-  xdefault.back_compat_alias("rockz:"..stonename)
 
   minetest.register_node("rockz:"..stonename.."_cobble", {
     description = stonedesc.." Cobblestone",
@@ -71,7 +62,6 @@ for _,stonetype in pairs(stonez) do
     drop = 'rockz:'..stonename.."_cobble",
     sounds = default.node_sound_stone_defaults(),
   })
-  xdefault.back_compat_alias("rockz:"..stonename.."_cobble")
 
   minetest.register_node("rockz:"..stonename.."_block",{
     description = stonedesc.." Block",
@@ -80,7 +70,6 @@ for _,stonetype in pairs(stonez) do
     drop = 'rockz:'..stonename..'_block',
     sounds = default.node_sound_stone_defaults(),
   })
-  xdefault.back_compat_alias("rockz:"..stonename.."_block")
 
   minetest.register_node("rockz:polished_"..stonename,{
     description = "Polished "..stonedesc,
@@ -89,7 +78,6 @@ for _,stonetype in pairs(stonez) do
     drop = 'rockz:polished_'..stonename,
     sounds = default.node_sound_stone_defaults(),
   })
-  xdefault.back_compat_alias("rockz:polished_"..stonename)
 
   minetest.register_node("rockz:polished_"..stonename.."_block",{
     description = "Polished "..stonedesc,
@@ -98,7 +86,6 @@ for _,stonetype in pairs(stonez) do
     drop = 'rockz:polished_'..stonename,
     sounds = default.node_sound_stone_defaults(),
   })
-  xdefault.back_compat_alias("rockz:polished_"..stonename.."_block")
 
   minetest.register_node("rockz:"..stonename.."_brick",{
     description = stonedesc.." Brick",
@@ -107,7 +94,6 @@ for _,stonetype in pairs(stonez) do
     drop = 'rockz:'..stonename..'_brick',
     sounds = default.node_sound_stone_defaults(),
   })
-  xdefault.back_compat_alias("rockz:"..stonename.."_brick")
 
   minetest.register_node("rockz:polished_"..stonename.."_brick",{
     description = "Smoothed "..stonedesc.." Brick",
@@ -116,7 +102,6 @@ for _,stonetype in pairs(stonez) do
     drop = 'rockz:polished_'..stonename..'_brick',
     sounds = default.node_sound_stone_defaults(),
   })
-  xdefault.back_compat_alias("rockz:polished_"..stonename.."_brick")
 
   rockz.register_polishing_recipe({
     type = "polishing",
@@ -172,29 +157,6 @@ for _,stonetype in pairs(stonez) do
 	}
   })
 end
-
--- Minerals
-
-minetest.register_node("rockz:stone_with_emerald", {
-	description = "Emerald Ore",
-	tiles = {"default_stone.png^rockz_mineral_emerald.png"},
-	groups = {cracky = 1},
-	drop = "rockz:emerald_piece",
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_node("rockz:emerald", {
-	description = "Emerald Block",
-	tiles = {"rockz_emerald_block.png"},
-	paramtype = "light",
-	groups = {cracky = 1, level = 2},
-	sounds = default.node_sound_stone_defaults(),
-})
-
-minetest.register_craftitem("rockz:emerald_piece", {
-	description = "Emerald",
-	tiles = {"rockz_emerald.png"}
-})
 
 -- Overriding Ice and sediment nodes
 
