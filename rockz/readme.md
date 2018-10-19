@@ -1,0 +1,1 @@
+rockz adds… ROCKS! pretty ones too. currently adds andesite, diorite, granite, marble, turquoise, jade, bedrock, and indestructable bedrock with a variety of different blocks like the standard node, a block, a brick, a cobble, and a polished varient of all of them except the cobbles. They make a cool house.

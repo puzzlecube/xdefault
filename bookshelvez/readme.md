@@ -1,0 +1,1 @@
+bookshelvez adds bookshelves for every node in the wood group. TODO: Fix it generating bookshelves for things like moreblocks circular sawed nodes and make it generate more than just shelves for each real wood, perhaps replace the doorz mod.

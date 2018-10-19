@@ -1,0 +1,1 @@
+Mineralz: adds loads of cool ores and minerals and some (a lot) more decorative materials to fiddle around with and buind cool stuff!
