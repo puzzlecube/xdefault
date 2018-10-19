@@ -86,7 +86,7 @@ minetest.register_ore({
         },
 })
 
-minetst.register_ore({
+minetest.register_ore({
 	ore_type = "blob",
 	ore = "mineralz:lapis_lazuli_ore",
 	wherein = {"default:stone"},
