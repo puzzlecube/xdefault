@@ -12,7 +12,7 @@ minetest.register_ore({
 		scale = 4,
 		spread = {x = 16, y = 16, z = 16},
 		seed = 3216,
-		octaves = 1,
+		octaves = 3,
 		persist = 0.64
 	},
 })
@@ -31,7 +31,7 @@ minetest.register_ore({
 		scale = 4,
 		spread = {x = 16, y = 16, z = 16},
 		seed = -4506,
-		octaves = 1,
+		octaves = 3,
 		persist = 0.64
 	},
 })
@@ -50,7 +50,7 @@ minetest.register_ore({
 		scale = 4,
 		spread = {x = 16, y = 16, z = 16},
 		seed = -1846,
-		octaves = 1,
+		octaves = 3,
 		persist = 0.64
 	},
 })
@@ -67,9 +67,9 @@ minetest.register_ore({
 	noise_params    = {
 		offset = -0.6,
 		scale = 4,
-		spread = {x = 16, y = 16, z = 16},
+		spread = {x = 32, y = 32, z = 32},
 		seed = -3446,
-		octaves = 1,
+		octaves = 3,
 		persist = 0.64
 	},
 })
@@ -86,9 +86,9 @@ minetest.register_ore({
 	noise_params    = {
 		offset = -0.6,
 		scale = 4,
-		spread = {x = 16, y = 16, z = 16},
+		spread = {x = 32, y = 32, z = 32},
 		seed = 6876,
-		octaves = 1,
+		octaves = 3,
 		persist = 0.64
 	},
 })
@@ -105,9 +105,9 @@ minetest.register_ore({
 	noise_params    = {
 		offset = -0.6,
 		scale = 4,
-		spread = {x = 16, y = 16, z = 16},
+		spread = {x = 32, y = 32, z = 32},
 		seed = 3942,
-		octaves = 1,
+		octaves = 3,
 		persist = 0.64
 	},
 })
@@ -116,8 +116,8 @@ minetest.register_ore({
 	ore_type        = "blob",
 	ore             = "rockz:basalt",
 	wherein         = {"default:stone"},
-	clust_scarcity  = 16 ^ 3,
-	clust_size      = 26,
+	clust_scarcity  = 24 ^ 3,
+	clust_size      = 16,
 	y_min           = -31000,
 	y_max           = 1503,
 	noise_threshold = 0.1,
@@ -201,25 +201,6 @@ minetest.register_ore({
 		seed = -3312,
 		octaves = 1,
 		persist = 0.14
-	},
-})
-
-minetest.register_ore({
-	ore_type        = "scatter",
-	ore             = "rockz:stone_with_emerald",
-	wherein         = {"default:stone"},
-	clust_scarcity  = 8 ^ 3,
-	clust_size      = 2,
-	y_min           = -31000,
-	y_max           = -512,
-	noise_threshold = 0.1,
-	noise_params    = {
-		offset = -0.6,
-		scale = 4,
-		spread = {x = 16, y = 16, z = 16},
-		seed = -1846,
-		octaves = 1,
-		persist = 0.64
 	},
 })
 
