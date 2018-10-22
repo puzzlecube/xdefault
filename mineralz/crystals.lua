@@ -28,6 +28,17 @@ minetest.register_node("mineralz:quartz_block", {
 	sounds = default.node_sound_stone_defaults,
 })
 
+minetest.register_node("mineralz:quartz_pillar", {
+	description = "Quartz Pillar",
+	tiles = {"mineralz_quartz.png^"..mineralz.pillar_template.ends, "mineralz_quartz.png^"..mineralz.pillar_template.ends, "mineralz_quartz.png^"..mineralz.pillar_template.side},
+	paramtype="light",
+	paramtype2="facedir",
+	on_place = minetest.rotate_node,
+	is_ground_content = true,
+	groups = {cracky=3,level=2},
+	sounds = default.node_sound_stone_defaults,
+})
+
 minetest.register_node("mineralz:quartz_brick", {
 	description = "Quartz Brick",
 	tiles = {"mineralz_quartz.png^"..mineralz.brick_template},
@@ -68,6 +79,17 @@ minetest.register_craftitem("mineralz:quartz_shard", {
 minetest.register_node("mineralz:rose_quartz", {
 	description = "Rose Quartz",
 	tiles = {"mineralz_rose_quartz.png"},
+	is_ground_content = true,
+	groups = {cracky=3,level=2},
+	sounds = default.node_sound_stone_defaults,
+})
+
+minetest.register_node("mineralz:rose_quartz_pillar", {
+	description = "Rose Quartz Pillar",
+	tiles = {"mineralz_rose_quartz.png^"..mineralz.pillar_template.ends, "mineralz_rose_quartz.png^"..mineralz.pillar_template.ends, "mineralz_rose_quartz.png^"..mineralz.pillar_template.side},
+	paramtype="light",
+	paramtype2="facedir",
+	on_place = minetest.rotate_node,
 	is_ground_content = true,
 	groups = {cracky=3,level=2},
 	sounds = default.node_sound_stone_defaults,
@@ -126,6 +148,17 @@ minetest.register_node("mineralz:jet_quartz", {
 	sounds = default.node_sound_stone_defaults,
 })
 
+minetest.register_node("mineralz:jet_quartz_pillar", {
+	description = "Jet Quartz Pillar",
+	tiles = {"mineralz_jet_quartz.png^"..mineralz.pillar_template.ends, "mineralz_jet_quartz.png^"..mineralz.pillar_template.ends, "mineralz_jet_quartz.png^"..mineralz.pillar_template.side},
+	paramtype="light",
+	paramtype2="facedir",
+	on_place = minetest.rotate_node,
+	is_ground_content = true,
+	groups = {cracky=3,level=2},
+	sounds = default.node_sound_stone_defaults,
+})
+
 minetest.register_node("mineralz:jet_quartz_block", {
 	description = "Jet Quartz Block",
 	tiles = {"mineralz_jet_quartz.png^"..mineralz.block_template},
@@ -174,6 +207,17 @@ minetest.register_craftitem("mineralz:jet_quartz_shard", {
 minetest.register_node("mineralz:amethyst", {
 	description = "Amethyst",
 	tiles = {"mineralz_amethyst.png"},
+	is_ground_content = true,
+	groups = {cracky=3,level=2},
+	sounds = default.node_sound_stone_defaults,
+})
+
+minetest.register_node("mineralz:amethyst_pillar", {
+	description = "Amethyst Pillar",
+	tiles = {"mineralz_amethyst.png^"..mineralz.pillar_template.ends, "mineralz_amethyst.png^"..mineralz.pillar_template.ends, "mineralz_amethyst.png^"..mineralz.pillar_template.side},
+	paramtype="light",
+	paramtype2="facedir",
+	on_place = minetest.rotate_node,
 	is_ground_content = true,
 	groups = {cracky=3,level=2},
 	sounds = default.node_sound_stone_defaults,
