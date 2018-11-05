@@ -56,7 +56,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("puzzleblocks:puzzleblock_flat", {
-	description = "Puzzle block (flat)"
+	description = "Puzzle block (flat)",
 	tiles = {"puzzleblocks_paper_block.png"},
 	drawtype = "nodebox",
 	paramtype = "light",
