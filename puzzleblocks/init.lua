@@ -43,7 +43,7 @@ minetest.register_node("puzzleblocks:paper_block", {
 	is_ground_content = false,
 	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3, paper=1},
 	sounds = default.node_sound_leaves_defaults()
-}
+})
 
 minetest.register_craft({
 	type = "shapeless",
