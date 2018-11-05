@@ -38,7 +38,7 @@ puzzleblock_flat = {
 }
 
 minetest.register_node("puzzleblocks:paper_block", {
-	description "Block of Paper"
+	description "Block of Paper",
 	tiles = {"puzzleblocks_paper_block.png"},
 	is_ground_content = false,
 	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3, paper=1},
