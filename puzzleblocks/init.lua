@@ -38,8 +38,9 @@ puzzleblock_flat = {
 }
 
 minetest.register_node("puzzleblocks:paper_block", {
-	description "Block of Paper",
+	description = "Block of Paper",
 	tiles = {"puzzleblocks_paper_block.png"},
+	-- paramtype2 = "color" --TODO
 	is_ground_content = false,
 	groups = {snappy = 2, choppy = 2, oddly_breakable_by_hand = 3, flammable = 3, paper=1},
 	sounds = default.node_sound_leaves_defaults()
@@ -47,7 +48,7 @@ minetest.register_node("puzzleblocks:paper_block", {
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "xbuild:paper_block 1",
+	output = "puzzleblocks:paper_block 1",
 	recipe = {
 		"default:paper", "default:paper", "default:paper",
 		"default:paper", "default:paper", "default:paper",
@@ -60,6 +61,7 @@ minetest.register_node("puzzleblocks:puzzleblock_flat", {
 	tiles = {"puzzleblocks_paper_block.png"},
 	drawtype = "nodebox",
 	paramtype = "light",
+	paramtype2 = "facedir", -- TODO: change to color_facedir
 	walkable = false,
 	node_box = {
 		type = "fixed",
@@ -68,10 +70,11 @@ minetest.register_node("puzzleblocks:puzzleblock_flat", {
 })
 
 minetest.register_craft({
-	output = "xbuild:puzzleblock_flat 1",
+	type = "shaped",
+	output = "puzzleblocks:puzzleblock_flat",
 	recipe = {
-		"default:paper", "default:paper", "default:paper",
-		"", "default:paper", "",
-		"default:paper", "default:paper", "default:paper",
+		{"default:paper", "default:paper", "default:paper"},
+		{"", "default:paper", ""},
+		{"default:paper", "default:paper", "default:paper"},
 	},
 })
