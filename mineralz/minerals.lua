@@ -1,4 +1,4 @@
--- Hey it is redundantly named!
+-- Yeah it is redundantly named, so what.
 
 minetest.register_craftitem("mineralz:emerald", {
 	description = "Emerald",
@@ -79,6 +79,37 @@ minetest.register_node("mineralz:stone_with_malachite", {
 		max_items = 2,
 		items = {
 			items = {"mineralz:malachite"},
+			rarity = 1,
+		},
+	},
+})
+
+minetest.register_item("mineralz:salt", {
+	description = "Salt",
+	inventory_image = "mineralz_salt.png",
+})
+
+
+minetest.register_node("mineralz:salt_block", {
+	description = "Salt block",
+	tiles = {"mineralz_salt_block.png"},
+	is_ground_content = true,
+	drawtype = "glasslike",
+	paramtype = "light",
+	groups = {cracky=2, level=1},
+	sounds = default.node_sound_glass_defaults,
+})
+
+minetest.register_node("mineralz:sandstone_with_salt", {
+	description "Sandstone with Salt",
+	tiles = {"default_sandstone.png^mineralz_salt_ore.png"}.
+	is_ground_content = true,
+	groups = {cracky=1,level=1},
+	sounds = default.node_sound_stone_defaults,
+	drops = {
+		max_items=2,
+		items = {
+			items = {"mineralz:salt"},
 			rarity = 1,
 		},
 	},

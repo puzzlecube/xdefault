@@ -1,5 +1,5 @@
 -- The rockz mod ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- License of everything LGP v3 --
+-- License of everything GPL v3.0 or later --
 
 -- Stones ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -38,6 +38,7 @@ local stonez = {
  	{"basalt",	"Basalt",			{cracky = 2, level = 2}},
 	{"whitestone",	"Whitestone",			{cracky = 1}},
 	{"bedrock",	"Bedrock",			{cracky = 3, level = 3, immortal = 1}},
+	{"pumice",	"Pumice",	{cracky=1, level=1}},
 	{"bedrock2",	"Indestructable Bedrock",	{unbreakable = 1, immortal = 1, level=10}},
 }
 for _,stonetype in pairs(stonez) do
@@ -184,6 +185,19 @@ minetest.register_node("rockz:packed_ice", {
 -- node table
 
 local rockznodes = {
+	"packed_ice",
+}
+
+for _,rock in pairs(stonez) do
+	local stone = rock[1]
+	-- block_form denotes what the name of the blocks to insert should be with @ being replaced with the local stone variable. eg @_cobble = andesite_cobble
+	local block_form = {"@_cobble", "@_block", "@_brick", "polished_@", "polished_@_block", "polished_@_brick"}
+	for _,form in pairs(block_form) do
+		table.insert(rockznodes, form:gsub("@",stone))
+	end
+end
+
+--[[local rockznodes = {
 	"andesite",
 	"diorite",
 	"granite",
@@ -193,7 +207,8 @@ local rockznodes = {
 	"basalt",
 	"whitestone",
 	"bedrock",
-  "andesite_cobble",
+	"pumice",
+ 	"andesite_cobble",
 	"diorite_cobble",
 	"granite_cobble",
 	"turquoise_cobble",
@@ -202,6 +217,7 @@ local rockznodes = {
 	"basalt_cobble",
 	"whitestone_cobble",
 	"bedrock_cobble",
+	"pumice_cobble",
 	"andesite_block",
 	"diorite_block",
 	"granite_block",
@@ -249,64 +265,11 @@ local rockznodes = {
 	"polished_bedrock_brick",
 	"packed_ice",
 }
-
---[[local rockznodesmb = {
-	"andesite",
-	"diorite",
-	"granite",
-	"turquoise",
-	"jade",
-	"marble",
-	"basalt",
-	"whitestone",
-	"bedrock",
-	"andesite_block",
-	"diorite_block",
-	"granite_block",
-	"turquoise_block",
-	"jade_block",
-	"marble_block",
-	"basalt_block",
-	"whitestone_block",
-	"bedrock_block",
-	"polished_andesite",
-	"polished_diorite",
-	"polished_granite",
-	"polished_turquoise",
-	"polished_jade",
-	"polished_marble",
-	"polished_basalt",
-	"polished_whitestone",
-	"polished_bedrock",
-	"andesite_brick",
-	"diorite_brick",
-	"granite_brick",
-	"turqqoise_brick",
-	"jade_brick",
-	"marble_brick",
-	"basalt_brick",
-	"whitestone_brick",
-	"bedrock_brick",
-	"polished_andesite_brick",
-	"polished_diorite_brick",
-	"polished_granite_brick",
-	"polished_turquoise_brick",
-	"polished_jade_brick",
-	"polished_marble_brick",
-	"polished_basalt_brick",
-	"polished_whitestone_brick",
-	"polished_bedrock_brick",
-	"packed_ice",
-}]]
-
-rockznodesmb = rockznodes
-
-local nodestowall = {
-	""}
+]]
 
 -- moreblocks stuff
 if minetest.get_modpath("moreblocks") then
-	for _, name in pairs(rockznodesmb) do
+	for _, name in pairs(rockznodes) do
 		local nodename = "rockz:"..name
 		local ndef = minetest.registered_nodes[nodename]
 		if ndef then

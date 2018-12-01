@@ -90,7 +90,7 @@ minetest.register_ore({
 	ore_type = "blob",
 	ore = "mineralz:lapis_lazuli_ore",
 	wherein = {"default:stone"},
-	clust_scarcity = 12 * 12 * 12,
+	clust_scarcity = 18 * 18 * 18,
 	clust_num_ores = 8,
 	clust_size = 4,
 	y_min = -256,
@@ -132,5 +132,25 @@ minetest.register_ore({
 		seed = -1846,
 		octaves = 1,
 		persist = 0.64
+	},
+})
+
+minetest.register_ore({
+	ore_type = "scatter",
+	ore = "mineralz:salt_ore",
+	wherein = {"default:sandstone"},
+	clust_scarcity = 8 * 8 * 8,
+	clust_num_ores = 32,
+	clust_size=6,
+	y_min = -33000,
+	y_max = 5,
+	noise_threshold=0.0625,
+	noise_params    = {
+		offset = 0,
+		scale = 2,
+		spread = {x = 32, y = 32, z = 32},
+		seed = -3195,
+		octaves = 1,
+		persist = 0.54
 	},
 })
