@@ -84,7 +84,7 @@ minetest.register_node("mineralz:stone_with_malachite", {
 	},
 })
 
-minetest.register_item("mineralz:salt", {
+minetest.register_craftitem("mineralz:salt", {
 	description = "Salt",
 	inventory_image = "mineralz_salt.png",
 })
@@ -101,8 +101,8 @@ minetest.register_node("mineralz:salt_block", {
 })
 
 minetest.register_node("mineralz:sandstone_with_salt", {
-	description "Sandstone with Salt",
-	tiles = {"default_sandstone.png^mineralz_salt_ore.png"}.
+	description = "Sandstone with Salt",
+	tiles = {"default_sandstone.png^mineralz_salt_ore.png"},
 	is_ground_content = true,
 	groups = {cracky=1,level=1},
 	sounds = default.node_sound_stone_defaults,

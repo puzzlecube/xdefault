@@ -193,7 +193,8 @@ for _,rock in pairs(stonez) do
 	-- block_form denotes what the name of the blocks to insert should be with @ being replaced with the local stone variable. eg @_cobble = andesite_cobble
 	local block_form = {"@_cobble", "@_block", "@_brick", "polished_@", "polished_@_block", "polished_@_brick"}
 	for _,form in pairs(block_form) do
-		table.insert(rockznodes, form:gsub("@",stone))
+		--table.insert(rockznodes, #rockznodes+1, form:gsub("@",stone)) -- Why?
+		rockznodes[#rockznodes+1] = form:gsub("@",stone)
 	end
 end
 
