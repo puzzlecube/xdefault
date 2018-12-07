@@ -21,7 +21,7 @@ local function search_nearby(pos,nodes)
 end
 
 
-if true then -- minetest.settings:get_bool("enable_lavacooling") ~= false then
+if minetest.settings:get_bool("enable_lavacooling") ~= false then
 	if minetest.get_modpath("gloopblocks") == true then
 		default.cool_lava = function(pos, node)
 			local neighbors={
