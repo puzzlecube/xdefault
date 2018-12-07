@@ -41,6 +41,9 @@ local stonez = {
 	{"pumice",	"Pumice",	{cracky=1, level=1}},
 	{"bedrock2",	"Indestructable Bedrock",	{unbreakable = 1, immortal = 1, level=10}},
 }
+
+-- TODO: optional insertions of other stones from other mods. TODO: darkage support	
+
 for _,stonetype in pairs(stonez) do
   local stonename = stonetype[1]
 	local stonedesc = stonetype[2]
@@ -267,6 +270,9 @@ end
 	"packed_ice",
 }
 ]]
+
+-- lava cooling
+dofile(mpath.."/lavacooling.lua")
 
 -- moreblocks stuff
 if minetest.get_modpath("moreblocks") then
